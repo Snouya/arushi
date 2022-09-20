@@ -1,0 +1,75 @@
+<?php $footer_logo=get_field('footer_logo','option');?>
+<?php $footer_menu1=get_field('footer_menu1','option');?>
+<?php $footer_menu2=get_field('footer_menu2','option');?>
+<?php $footer_menu = get_field('footer_menu','option');?>
+<?php $footer_menu4=get_field('footer_menu4','option');?>
+<?php $address_url = get_field('address_url','option');?>
+<?php $address_text = get_field('address_text','option');?>
+<?php $email = get_field('email','option');?>
+<?php $telephone = get_field('telephone','option');?>
+<?php $social_icon_footer = get_field('social_icon_footer','option');?>
+<?php $termcondition = get_field('term__&__condition','option');?>
+<?php $footer_last_section = get_field('footer_last_section','option');?>
+<?php $small_logo = get_field('small_logo_','option');?>
+<?php $small_logo_url = get_field('small_logo_url','option');?>
+<!-- Footer Start -->
+<footer class="site-footer">
+    <div class="site-footer--top">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 site-footer--top__left">
+                    <a href="">
+                        <?php if(!empty($footer_logo)){?>
+                        <img src="<?php echo esc_url($footer_logo['url']);?>" alt="<?php echo esc_attr($footer_logo['alt']); ?>"/>
+                    <?php }?>
+                    </a>
+                </div>
+                <div class="col-md-6 site-footer--top__right">
+                    <div class="footer-links-wrapper">
+                        <div class="footer-link-block">
+                            <?php echo $footer_menu1;?>
+                        </div>
+                        <div class="footer-link-block">
+                           <?php  echo $footer_menu2;?>
+                        </div>
+                        <div class="footer-link-block">
+                           <?php  echo $footer_menu;?>
+                        </div>
+                        <div class="footer-link-block">
+                           <?php  echo $footer_menu4;?>
+                            <p class="address">
+                                <a href="<?php echo $address_url;?>">
+                                    <?php echo $address_text;?>
+                                </a>
+                            </p>
+                            <p class="email">
+                                <a href="mailto:info@firmpower.com.au" target="_blank"><?php echo $email;?></a>
+                            </p>
+                            <p class="phone">
+                            <a href="tel:1300521328" target="_blank"><?php echo $telephone;?></a>   
+                            </p>
+                            <p class="social-links">
+                                <a href="" target="_blank"><img src="<?php echo esc_url($social_icon_footer['url']); ?>" alt="<?php echo esc_attr($social_icon_footer['alt']); ?>"></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="site-footer--bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 site-footer--bottom__left">
+                    <p><?php echo $termcondition;?></p>
+                </div>
+                <div class="col-md-6 site-footer--bottom__right">
+                    <p><?php echo $footer_last_section;?><a href="<?php echo $small_logo_url;?>" target=""><img src="<?php echo esc_url($small_logo['url']);?>" alt="<?php echo esc_attr($small_logo['alt']); ?>"></a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Footer End  -->
+<?php wp_footer();?>
+</body>

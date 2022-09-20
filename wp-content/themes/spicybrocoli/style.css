@@ -1,0 +1,249 @@
+/*
+Theme Name: Spicy Broccoli 2019
+Theme URI: http://spicybroccoli.com
+Description: Spicy Broccoli template for WordPress sites. Good for you company's health!
+Author: Spicy Broccoli Media
+Author URI: http://spicybroccoli.com/
+Version: 1.1
+License: Comercial
+*/
+
+/* =Reset default browser CSS. Based on work by Eric Meyer: http://meyerweb.com/eric/tools/css/reset/index.html */
+html, body, div, span, applet, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+	background: transparent;
+	border: 0;
+	margin: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+html {
+    height: 100%;
+}
+*, *:before, *:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/* BODY - FALLBACK VALUES */
+body {
+	font-family: sans-serif;
+	background-color: #fff;
+	color: #333333;
+	height: 100%;
+	font-size: 16px;
+	line-height: 22px;
+	font-weight: 300;
+}
+/* END BODY - FALLBACK VALUES */
+
+/* FONTS */
+.font-fontname{
+	font-family: 'FontName', sans-serif;
+}
+/* END FONTS */
+
+/* TITLE HEADERS */
+h1, h2, h3, h4, h5, h6, .title-header {
+	clear: both;
+	font-weight: 700;
+	font-size: 40px;
+	line-height: 45px;
+	text-transform: uppercase;
+	margin-bottom: 30px;
+	text-align: center;
+	color: #153a5f;
+}
+.title-header.small {
+	font-size: 25px;
+	line-height: 30px;
+}
+.title-header.xsmall {
+	font-size: 18px;
+	line-height: 22px;
+}
+.title-header.xxsmall {
+	font-size: 15px;
+	line-height: 22px;
+}
+.title-header span,
+.title-header strong,
+h1 strong,
+h2 strong,
+h3 strong,
+h4 strong,
+h5 strong,
+h6 strong {
+	font-size: 30px;
+	display: block;
+	text-transform: capitalize;
+	font-weight: 300;
+}
+/* PAGE CONFIG */
+#page .content h1,
+#page .content h2,
+#page .content h3,
+#page .content h4,
+#page .content h5,
+#page .content h6 {
+	text-align: left;
+	font-size: 25px;
+	line-height: 30px
+}
+#page .content h3 { font-size: 23px; line-height: 30px; }
+#page .content h4 { font-size: 21px; line-height: 28px; }
+#page .content h5 { font-size: 19px; line-height: 26px; }
+#page .content h6 { font-size: 17px; line-height: 24px; }
+/* END PAGE CONFIG */
+/* END TITLE HEADERS */
+
+/* PARAGRAPHS AND LISTS */
+p {
+	line-height: 25px;
+	margin-bottom: 30px;
+}
+p.large {
+	font-size: 20px;
+	line-height: 30px;
+}
+p:last-child {
+	margin-bottom: 0px;
+}
+article .content p:last-child {
+    margin-bottom: 0;
+}
+ol, ul {
+	list-style: none;
+}
+article ul > li,
+article ol > li {
+    padding-left: 0px;
+    line-height: 24px;
+}
+article ol{
+	list-style: decimal;
+}
+article ul {
+	list-style: square;
+}
+article ol,
+article ul {
+	list-style-position: outside;
+	margin-bottom: 30px;
+	margin-left: 18px;
+}
+blockquote {
+	quotes: none;
+}
+blockquote:before, blockquote:after {
+	content: '';
+	content: none;
+}
+/* END PARAGRAPHS AND LISTS */
+/* LINKS */
+a {
+	text-decoration: none;
+	color: inherit;
+}
+a:active, a:hover {
+	color: #40a757;
+}
+a, a *, a:before, a:after,
+.btn {
+	-webkit-transition: all .2s ease-in-out;
+	-moz-transition: all .2s ease-in-out;
+	-o-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+}
+/* END LINKS */
+
+/* IMAGES */
+figure img {
+	vertical-align: bottom;
+	display: block;
+}
+.img-responsive, .img-fluid {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+figure > img {
+	max-width: 100%;
+	height: auto;
+}
+figure.circle {
+    border-radius: 50%;
+    overflow: hidden;
+}
+.content-wrap img { margin-bottom: 30px; }
+/* END IMAGES */
+
+/* TEXTS */
+.txt-upper {
+	text-transform: uppercase;
+}
+.no-transform {
+	text-transform: initial;
+}
+/* END TEXTS */
+
+/* ALIGNMENTS */
+.align-left { text-align: left; }
+.align-right { text-align: right; }
+.align-center > p, 
+.align-center { text-align: center; }
+.img-center,
+.aligncenter, 
+img.aligncenter,
+.img-center img {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+/* END ALIGNMENTS */
+
+/* PADDINGS & MARGINS */
+.no-padding { padding: 0 !important; }
+.no-padding-top { padding-top: 0 !important; }
+.no-padding-bottom { padding-bottom: 0 !important; }
+.no-padding-left { padding-left: 0 !important; }
+.no-padding-right { padding-right: 0 !important; }
+.no-margin { margin: 0 !important; }
+.no-margin-top { margin-top: 0 !important; }
+.no-margin-bottom { margin-bottom: 0 !important; }
+.no-margin-left { margin-left: 0 !important; }
+.no-margin-right { margin-right: 0 !important; }
+/* END PADDINGS & MARGINS */
+
+/* BACKGROUND & COLOURS */
+.bg-cover {
+	background-size: cover;
+	background-position: center center;
+}
+/* END BACKGROUND & COLOURS */
+
+/* COLUMNS CONFIGURATION
+ * Theme uses Bootstrap Grid configuration, it is imported on <header> just before this file
+ * includes/scripts[php] file MUST be used to queue this file on WP.
+ * See instruction at https://getbootstrap.com/docs/4.3/layout/grid/;
+ */
+
+/* DEFINES/OVERRIDES THE GLOBAL CONTAINER SIZE */
+@media (min-width: 1141px) {
+    .container {
+    	width: 1140px;
+    }
+
+}
+ /* END COLUMNS CONFIGURATION */
+
+ /* ########################
+  * START OF CUSTOM CSS 
+  * ######################## */
+

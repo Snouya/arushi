@@ -1,0 +1,65 @@
+<?php
+/**
+ * The Header for our theme.
+ */
+?><!DOCTYPE html>
+<html <?php language_attributes(); ?>>
+<head>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<meta charset="<?php bloginfo( 'charset' ); ?>" />
+<title><?php echo wp_title(); ?></title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link href="https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600,700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>?ver=<?php echo date('Ymis'); //comment, remove or set a static version in this line when launching the website ?>" />
+<link rel="stylesheet" type="text/css" media="all" href="<?php echo get_template_directory_uri(); ?>/style-responsive.css?ver=<?php echo date('Ymis'); //comment, remove or set a static version in this line when launching the website ?>" />
+
+<?php wp_head(); ?>
+
+</head>
+
+<body <?php body_class(); ?>>
+
+<div id="mp-pusher" class="mp-pusher">
+    <nav class="mp-menu" id="mp-menu">
+		<div class="mp-level">
+	        <?php
+			if (has_nav_menu('primary')) {
+	           	wp_nav_menu(
+	            	array(
+	            		'theme_location' => 'primary',
+	            		'container'  => false,
+	            		'container_id' => 'mp-menu',
+	            		'menu_class' => 'mp-level',
+	            		'container_class' => 'mp-menu',
+	            		'menu_class' => '',
+	            		'walker' => new SBM_Responsive_Nav()
+	            	)
+	            );
+			}
+	        ?>
+        </div>
+    </nav>
+    <a href="#" id="trigger" class="menu-trigger"></a>
+</div>
+
+<header id="header">
+    <div class="header-wrapper">
+        <div class="container">
+            <?php
+			if (has_nav_menu('primary')) {
+                //INCLUDE THE MAIN NAVIGATION
+                wp_nav_menu(
+                    array(
+                        'container'  => 'nav',
+                        'container_class' => 'menu-header',
+                        'container_id' => 'menu',
+                        'theme_location' => 'primary',
+                    )
+                ); 
+			}
+            ?>
+        </div>
+    </div><!-- .header-wrapper -->
+</header><!-- #header -->

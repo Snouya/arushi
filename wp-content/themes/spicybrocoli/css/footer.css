@@ -1,0 +1,129 @@
+.site-footer {
+	background: var(--darkgrey);
+}
+
+.site-footer--top {
+	padding: 42px 0px 90px;
+}
+
+.site-footer--bottom {
+	padding: 7px 0px 8px;
+	background: var(--footer_bottom_bg);
+}
+
+.site-footer--bottom .row {
+	align-items: center;
+}
+
+.site-footer--bottom p {
+	font-size: 10px;
+	color: var(--white);
+	font-family: var(--font_lato);
+	line-height: 10px;
+	font-weight: 400;
+}
+
+.site-footer--bottom p a {
+	color: var(--white);
+	text-decoration: none;
+}
+
+.site-footer--bottom__right {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+.site-footer--bottom__right img {
+	margin-left: 14px;
+}
+
+.footer-links-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0 -37px;
+}
+
+.footer-link-block {
+    padding: 0 27px;
+}
+
+.footer-link-block p {
+    margin: 0;
+}
+.footer-link-block p.head {
+    font-size: 18px;
+    color: white;
+    line-height: 24px;
+    text-transform: uppercase;
+    font-family:var(--font_roboto);
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.footer-link-block p.head a {
+    color: white;
+}
+
+.footer-link-block ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-link-block a {
+    font-size: 14px;
+    color: white;
+    line-height: 19px;
+    font-family:var(--font_roboto);
+    font-weight: 400;
+    display: inline-block;
+    margin-bottom: 12px;
+}
+
+.footer-link-block p.head a {
+    font-size: 18px;
+}
+
+.footer-link-block p.email a,
+.footer-link-block p.phone a,
+.footer-link-block p.address a {
+    margin-bottom: 4px !important;
+}
+
+@media screen and (max-width: 1440px) {
+	.footer-links-wrapper {
+	    display: flex;
+	    flex-flow: row wrap;
+	    justify-content: space-between;
+	    margin: 0 -15px;
+	}
+
+	.footer-link-block {
+	    padding: 0 15px 20px;
+	}
+	.site-footer--top {
+		padding-bottom: 70px;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.footer-links-wrapper {
+		padding-top:  40px;
+		flex-direction: column;
+	}	
+	.site-footer--top {
+		padding-bottom: 30px;
+	}
+	.site-footer--bottom__left {
+		display: flex;
+		justify-content: center;
+	}
+	.site-footer--bottom {
+		padding: 10px 0px;
+	}
+	.site-footer--bottom__right {
+		justify-content: center;
+		padding-top: 10px;
+	}
+}

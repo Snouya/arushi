@@ -1,0 +1,60 @@
+<?php $sub_heading = get_sub_field('sub_heading');?>
+<?php $heading = get_sub_field('heading');?>
+<!-- projects Module Start -->
+<section class="module module__project">
+    <div class="container">
+        <div class="module__project--head">
+            <p class="small-heading"><?php echo $sub_heading;?></p>
+            <h2><?php echo $heading;?></h2>
+        </div>
+        <div class="row">
+            <?php
+   $args = array(
+               'taxonomy' => 'project_type',
+               'hide_empty' => false,
+               'orderby' => 'name',
+               'order'   => 'DESC'
+           );
+
+   $cats = get_terms($args);
+   //print_r($cats);
+   foreach($cats as $cat) {
+    //print_r($cat);
+$project_category_image = get_field('project_category_image', 'project_type'.'-'.$cat->term_id);
+$cat_id= $cat->term_id;
+
+?>
+
+            <div class="col-md-6 module__project--list">
+                <div class="module__project--wrapper">
+                    <div class="media-container">
+                        <img src="<?php the_field('project_category_image', 'term_'. $cat_id); ?>">
+                    </div>
+                    <div class="project-content">
+                        <h3><?php echo $cat->name; ?></h3>
+                        <ul class="button__group">
+                         <?php if( have_rows('category_buttons', 'term_'. $cat_id) ):
+                              while( have_rows('category_buttons', 'term_'. $cat_id) ) : the_row();?>
+                            <li>
+                                <?php $button_url = get_sub_field('button_url', 'term_'. $cat_id);?>
+                                <?php $button_text = get_sub_field('button_text', 'term_'. $cat_id);?>
+                                <a href="<?php echo $button_url;?>" class="btn btn-yellow"><?php echo $button_text;?>
+                                    <img src="<?php echo get_template_directory_uri();?>/images/arrow.svg">
+                                </a>
+                            </li>
+                                                    <?php 
+                           endwhile;
+                       else :
+                       endif;?>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <?php
+   }
+?>
+        </div>
+    </div>
+</section>
+<!-- projects Module End -->
